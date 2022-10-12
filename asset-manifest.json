@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/github-searcher-mui/static/css/main.3cca2a35.css",
+    "main.js": "/github-searcher-mui/static/js/main.72a0743b.js",
+    "static/js/787.30dcabdb.chunk.js": "/github-searcher-mui/static/js/787.30dcabdb.chunk.js",
+    "index.html": "/github-searcher-mui/index.html",
+    "main.3cca2a35.css.map": "/github-searcher-mui/static/css/main.3cca2a35.css.map",
+    "main.72a0743b.js.map": "/github-searcher-mui/static/js/main.72a0743b.js.map",
+    "787.30dcabdb.chunk.js.map": "/github-searcher-mui/static/js/787.30dcabdb.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3cca2a35.css",
+    "static/js/main.72a0743b.js"
+  ]
+}
