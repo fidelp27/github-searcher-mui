@@ -1,12 +1,5 @@
 import React from 'react';
-import {
-  Grid,
-  IconButton,
-  InputAdornment,
-  Link,
-  Stack,
-  Typography,
-} from '@mui/material';
+import { Grid, Link, Stack, Typography } from '@mui/material';
 
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import TwitterIcon from '@mui/icons-material/Twitter';
@@ -17,7 +10,12 @@ const LocationInformation = ({ dataUser }) => {
   const { location, twitter_username, blog, company } = dataUser;
 
   return (
-    <Grid container spacing={2} sx={{ marginTop: '15px' }}>
+    <Grid
+      container
+      direction={{ xs: 'column', sm: 'column', md: 'row' }}
+      spacing={2}
+      sx={{ marginTop: '15px' }}
+    >
       <Grid item xs={6}>
         <Stack direction="row" spacing={2}>
           <LocationOnIcon />

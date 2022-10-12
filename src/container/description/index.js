@@ -15,7 +15,7 @@ const Description = ({ dataUser }) => {
           <Typography variant="body1">Este usuario aún no tiene bio</Typography>
         )}
       </Stack>
-      <PaperInformation xs={12} dataUser={dataUser} />
+      <PaperInformation dataUser={dataUser} />
       <LocationInformation xs={12} dataUser={dataUser} />
     </>
   );

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { IconButton, InputAdornment, Stack, TextField } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
 
-const Searcher = ({ setInputUser, error }) => {
+const Searcher = ({ setInputUser }) => {
   const [valueInput, setValueInput] = useState('');
 
   const handleSubmit = () => {

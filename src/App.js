@@ -1,5 +1,5 @@
 import './App.css';
-import { Alert, Container } from '@mui/material';
+import { Alert, CircularProgress, Container } from '@mui/material';
 import Searcher from './components/searcher';
 import { useEffect, useState } from 'react';
 import { getGitHubUser } from './services/users';
@@ -9,8 +9,10 @@ function App() {
   const [inputUser, setInputUser] = useState('fidelp27');
   const [error, setError] = useState(false);
   const [dataUser, setDataUser] = useState({});
+  const [loading, setLoading] = useState(false);
 
   const gettingUser = async (user) => {
+    setLoading(true);
     try {
       const response = await getGitHubUser(user);
       if (response === 404) {
@@ -24,6 +26,8 @@ function App() {
       }
     } catch (error) {
       setError(true);
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -35,12 +39,9 @@ function App() {
   return (
     <div className="App">
       <Container
-        fixed
         sx={{
           background: 'whitesmoke',
-          maxWidth: '950px',
-          width: '950px',
-          height: '500px',
+          maxWidth: '100vw',
           borderRadius: '18px',
           diplay: 'flex',
           flexDirection: 'column',
@@ -55,7 +56,7 @@ function App() {
           setInputUser={setInputUser}
           error={error}
         />
-        <UserCard dataUser={dataUser} />
+        {loading ? <CircularProgress /> : <UserCard dataUser={dataUser} />}
       </Container>
     </div>
   );

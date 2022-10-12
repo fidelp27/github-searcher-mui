@@ -11,10 +11,14 @@ const UserCard = ({ dataUser: { avatar_url, name }, dataUser }) => {
       sx={{
         paddingTop: '20px',
         justifyContent: 'center',
+        width: '100%',
       }}
     >
-      <Stack direction="row" sx={{ alignItems: 'center' }}>
-        <Grid item xs={3}>
+      <Stack
+        direction={{ xs: 'column', sm: 'column', md: 'row' }}
+        sx={{ alignItems: 'center' }}
+      >
+        <Grid item xs={12} md={3}>
           <Avatar
             alt={name}
             src={avatar_url}
